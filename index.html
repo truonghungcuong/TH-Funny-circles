@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="circle.js"></script>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #dc1b1b;"></canvas>
+<script>
+    for (let i = 0; i < 3; i++) {
+        ctx = document.getElementById("myCanvas").getContext("2d");
+        circle = new Circle(300, 150, 100);
+        circle.setX(Math.floor(Math.random() * 1000));
+        cx = circle.getX();
+        circle.setY(Math.floor(Math.random() * 1000));
+        cy = circle.getY();
+        color = circle.getRandomcolor();
+        circle.setRadius(Math.floor(Math.random() * 80));
+        radius = circle.getRadius();
+        circle.createCircle(ctx);
+    }
+</script>
+</body>
+</html>
